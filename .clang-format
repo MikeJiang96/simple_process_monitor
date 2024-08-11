@@ -1,0 +1,23 @@
+---
+Language:        Cpp
+BasedOnStyle:  Google
+AccessModifierOffset: -4
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: None
+AllowShortLoopsOnASingleLine: false
+BinPackArguments: false
+BinPackParameters: false
+BreakConstructorInitializers: BeforeComma
+ColumnLimit:     120
+DerivePointerAlignment: false
+EmptyLineBeforeAccessModifier: Always
+IndentGotoLabels: false
+IndentWidth:     4
+InsertNewlineAtEOF: true
+PackConstructorInitializers: Never
+PointerAlignment: Right
+SeparateDefinitionBlocks: Always
+TabWidth:        4
+...
