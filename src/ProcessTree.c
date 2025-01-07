@@ -22,7 +22,7 @@
  * for all of the code used other than OpenSSL.
  */
 
-#include "ProcessTree.h"
+#include "simple_process_monitor/ProcessTree.h"
 
 #include <assert.h>
 #include <dirent.h>
@@ -33,7 +33,7 @@
 #include <sys/stat.h>
 #include <sys/sysinfo.h>
 
-#include "system_info.h"
+#include "simple_process_monitor/system_info.h"
 #include "util/Mem.h"
 #include "util/Str.h"
 #include "util/StringBuffer.h"

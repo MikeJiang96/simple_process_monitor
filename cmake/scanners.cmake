@@ -1,5 +1,6 @@
 file(GLOB_RECURSE ALL_SRC_FILES CONFIGURE_DEPENDS
      ${CMAKE_SOURCE_DIR}/include/*.h
+     ${CMAKE_SOURCE_DIR}/src/*.h
      ${CMAKE_SOURCE_DIR}/src/*.c
      ${CMAKE_SOURCE_DIR}/src/*.cpp
      ${CMAKE_SOURCE_DIR}/test/*.cpp)

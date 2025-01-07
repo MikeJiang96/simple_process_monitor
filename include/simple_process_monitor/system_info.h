@@ -22,8 +22,8 @@
  * for all of the code used other than OpenSSL.
  */
 
-#ifndef SYSTEM_INFO_H
-#define SYSTEM_INFO_H
+#ifndef SIMPLE_PROCESS_MONITOR_SYSTEM_INFO_H
+#define SIMPLE_PROCESS_MONITOR_SYSTEM_INFO_H
 
 #include <stdbool.h>
 #include <stddef.h>

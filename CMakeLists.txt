@@ -21,7 +21,7 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -fno-omit-frame-pointer"
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "include/simple_process_monitor/*.h" "src/*.c" "src/*.cpp")
+file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "include/*.h" "src/*.h" "src/*.c" "src/*.cpp")
 
 add_library(simple_process_monitor SHARED ${SRC_FILES})
 
@@ -29,8 +29,6 @@ target_compile_options(simple_process_monitor
     PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wshadow>
 )
 
-target_include_directories(simple_process_monitor PRIVATE include/simple_process_monitor/util)
-target_include_directories(simple_process_monitor PRIVATE include/simple_process_monitor)
 target_include_directories(simple_process_monitor PUBLIC include)
 
 find_package(Threads REQUIRED)

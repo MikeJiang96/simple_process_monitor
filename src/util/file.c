@@ -28,8 +28,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#include "util/Str.h"
-#include "util/debug.h"
+#include "Str.h"
+#include "debug.h"
 
 bool file_readProc(char *buf, int buf_size, const char *name, int pid, int tid, int *bytes_read) {
     assert(buf);

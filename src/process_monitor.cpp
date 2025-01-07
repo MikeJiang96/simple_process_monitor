@@ -1,9 +1,9 @@
-#include "process_monitor.h"
+#include "simple_process_monitor/process_monitor.h"
 
 #include <cstdio>
 #include <thread>
 
-#include "system_info.h"
+#include "simple_process_monitor/system_info.h"
 
 namespace simple_process_monitor {
 

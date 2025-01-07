@@ -1,5 +1,5 @@
-#ifndef PROCESS_MONITOR_H
-#define PROCESS_MONITOR_H
+#ifndef SIMPLE_PROCESS_MONITOR_PROCESS_MONITOR_H
+#define SIMPLE_PROCESS_MONITOR_PROCESS_MONITOR_H
 
 #include <sys/types.h>
 #include <unistd.h>

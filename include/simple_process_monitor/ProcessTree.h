@@ -22,8 +22,8 @@
  * for all of the code used other than OpenSSL.
  */
 
-#ifndef PROCESS_TREE_H
-#define PROCESS_TREE_H
+#ifndef SIMPLE_PROCESS_MONITOR_PROCESS_TREE_H
+#define SIMPLE_PROCESS_MONITOR_PROCESS_TREE_H
 
 #include <stdbool.h>
 #include <sys/types.h>
