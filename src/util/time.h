@@ -22,8 +22,8 @@
  * for all of the code used other than OpenSSL.
  */
 
-#ifndef UTIL_TIME_UTIL_H
-#define UTIL_TIME_UTIL_H
+#ifndef UTIL_TIME_H
+#define UTIL_TIME_H
 
 #include <stddef.h>
 #include <sys/time.h>

@@ -23,7 +23,7 @@ static void testSystemInfo() {
 
     assert(update_system_info(&systemInfo));
 
-    printf("System CPU usage is %.1f %% / 100 %%\n", systemInfo.cpu.usage.user + systemInfo.cpu.usage.system);
+    printf("System CPU usage is %.1f%% / 100%%\n", systemInfo.cpu.usage.user + systemInfo.cpu.usage.system);
     printf("\n");
 }
 

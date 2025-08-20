@@ -39,7 +39,7 @@
 #include "util/StringBuffer.h"
 #include "util/debug.h"
 #include "util/file.h"
-#include "util/time_util.h"
+#include "util/time.h"
 
 /**
  *  General purpose /proc methods.

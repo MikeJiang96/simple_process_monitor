@@ -30,6 +30,9 @@ public:
         logTopCpu(printf);
     }
 
+    // First monitorInterval_ for top processes' CPU usages, second monitorInterval for their top threads' CPU usages.
+    // So, threads' CPU usages will delay one monitorInterval_.
+    // And total cost time is about two monitorInterval_.
     template <typename LOGGER_TYPE>
     void logTopCpu(LOGGER_TYPE &logger) const {
         TopProcessInfos topProcessInfos = collectTopInfo(TopInfoType::CPU);
@@ -65,7 +68,7 @@ public:
         logger("------------------------------------------------------------\n");
 
         for (unsigned long i = 0; i < topProcessInfos.size(); i++) {
-            logger("%d  %.1f %%  %s\n",
+            logger("%d  %.1f%%  %s\n",
                    topProcessInfos[i].pid,
                    topProcessInfos[i].cpuUsage,
                    topProcessInfos[i].cmdline.c_str());
@@ -74,7 +77,7 @@ public:
 
             if (pid_ == ALL_PROCESSES) {
                 for (auto &thread : topProcessThreadInfos[i]) {
-                    logger("%d  %.1f %%  %s\n", thread.pid, thread.cpuUsage, thread.cmdline.c_str());
+                    logger("%d  %.1f%%  %s\n", thread.pid, thread.cpuUsage, thread.cmdline.c_str());
                 }
 
                 logger("------------------------------------------------------------\n");

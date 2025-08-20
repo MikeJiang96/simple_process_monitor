@@ -26,7 +26,7 @@ file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "include/*.h" "src/*.h" "src/*.c" 
 add_library(simple_process_monitor SHARED ${SRC_FILES})
 
 target_compile_options(simple_process_monitor
-    PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wshadow>
+    PRIVATE $<$<COMPILE_LANGUAGE:CXX>: -Wconversion -Wshadow>
 )
 
 target_include_directories(simple_process_monitor PUBLIC include)
