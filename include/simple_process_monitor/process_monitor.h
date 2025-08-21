@@ -9,8 +9,8 @@
 #include <thread>
 #include <vector>
 
-#include "simple_process_monitor/process_tree_wrapper.h"
-#include "simple_process_monitor/system_info.h"
+#include <simple_process_monitor/process_tree_wrapper.h>
+#include <simple_process_monitor/system_info.h>
 
 namespace simple_process_monitor {
 

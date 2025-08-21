@@ -3,7 +3,7 @@
 #include <cstdio>
 #include <thread>
 
-#include "simple_process_monitor/process_monitor.h"
+#include <simple_process_monitor/process_monitor.h>
 
 static void testSystemInfo() {
     using namespace std::chrono_literals;

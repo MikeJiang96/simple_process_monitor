@@ -10,7 +10,7 @@
 #include <utility>
 #include <vector>
 
-#include "ProcessTree.h"
+#include <simple_process_monitor/ProcessTree.h>
 
 namespace simple_process_monitor {
 

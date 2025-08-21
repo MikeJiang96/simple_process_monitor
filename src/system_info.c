@@ -22,7 +22,7 @@
  * for all of the code used other than OpenSSL.
  */
 
-#include "simple_process_monitor/system_info.h"
+#include <simple_process_monitor/system_info.h>
 
 #include <assert.h>
 #include <string.h>
