@@ -47,13 +47,17 @@ static void testProcessMonitor() {
     {
         ProcessMonitor pmAll(ALL_PROCESSES);
 
-        pmAll.logTopCpu();
-        pmAll.logTopRam();
+        pmAll.logTopCpuToStdout();
+        pmAll.logTopRamToStdout();
     }
 
     {
         ProcessMonitor pmOneProcess(1);
-        TestLogger logger;
+
+        auto logger = [](std::string_view s) {
+            TestLogger testLogger;
+            return testLogger("%s", s.data());
+        };
 
         pmOneProcess.logTopCpu(logger);
         pmOneProcess.logTopRam(logger);
@@ -62,8 +66,8 @@ static void testProcessMonitor() {
     {
         ProcessMonitor pmInvalidProcess(1234567);
 
-        pmInvalidProcess.logTopCpu();
-        pmInvalidProcess.logTopRam();
+        pmInvalidProcess.logTopCpuToStdout();
+        pmInvalidProcess.logTopRamToStdout();
     }
 }
 

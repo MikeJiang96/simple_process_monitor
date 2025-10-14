@@ -14,8 +14,8 @@
 
 namespace simple_process_monitor {
 
-enum class TopInfoType : uint8_t {
-    CPU,
+enum class TopInfoType {
+    CPU = 0,
     RAM
 };
 
@@ -33,6 +33,8 @@ struct ProcessOrThreadInfo {
         , ramUsage(ramUsage_)
         , cmdline(std::move(cmdline_)) {}
 };
+
+using TopProcessInfos = std::vector<ProcessOrThreadInfo>;
 
 class ProcessTreeWrapper {
 public:
@@ -56,11 +58,11 @@ public:
         }
     }
 
-    [[nodiscard]] std::vector<ProcessOrThreadInfo> getTopProcessInfos(TopInfoType type, int count) const;
+    [[nodiscard]] TopProcessInfos getTopProcessInfos(TopInfoType type, int count) const;
 
 private:
     template <typename T>
-    std::vector<ProcessOrThreadInfo> getTopProcessInfos(T &maxPQ, int count) const;
+    TopProcessInfos getTopProcessInfos(T &maxPQ, int count) const;
 
     const pid_t pid_;
 

@@ -4,7 +4,7 @@
 
 namespace simple_process_monitor {
 
-std::vector<ProcessOrThreadInfo> ProcessTreeWrapper::getTopProcessInfos(TopInfoType type, int count) const {
+TopProcessInfos ProcessTreeWrapper::getTopProcessInfos(TopInfoType type, int count) const {
     if (treeSize_ <= 0) {
         return {};
     }
@@ -39,7 +39,7 @@ std::vector<ProcessOrThreadInfo> ProcessTreeWrapper::getTopProcessInfos(TopInfoT
 }
 
 template <typename T>
-std::vector<ProcessOrThreadInfo> ProcessTreeWrapper::getTopProcessInfos(T &maxPQ, int count) const {
+TopProcessInfos ProcessTreeWrapper::getTopProcessInfos(T &maxPQ, int count) const {
     std::vector<ProcessOrThreadInfo> ret;
 
     for (int i = 0; i < treeSize_; i++) {
